@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://1tddsinqun01"]
+
+[ext_resource type="Texture2D" uid="uid://krf31raykadr" path="res://Chair.png" id="1_keo3y"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bxhgy"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_keo3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_bxhgy")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d10glxpa6uvte"]
+
+[ext_resource type="Script" path="res://scenes/axe.gd" id="1_domyt"]
+[ext_resource type="Texture2D" uid="uid://cdrucvqllyioc" path="res://axe.png" id="1_g7822"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6nqle"]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_domyt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_g7822")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_6nqle")
