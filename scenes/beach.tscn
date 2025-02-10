@@ -762,7 +762,7 @@ rotation = 0.71733
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_wh7x5")
 
-[node name="CharacterBody2D9" parent="SceneObjects" instance=ExtResource("6_dc0qc")]
+[node name="Axe" parent="SceneObjects" instance=ExtResource("6_dc0qc")]
 z_index = -1
 z_as_relative = false
 position = Vector2(358, 575)
@@ -776,7 +776,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_flf6x")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("8_n2gn6")]
+[node name="Sickle" parent="." instance=ExtResource("8_n2gn6")]
 z_index = -1
 position = Vector2(255, 572)
 

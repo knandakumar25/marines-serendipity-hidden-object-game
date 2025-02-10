@@ -1,20 +1,18 @@
 extends Area2D
 
-# Signal to emit when collected 
+# Signal to emit when collected
 signal collected(object)
 
-# Called when the node enters the scene tree for the first time.
-var collected_objects = []
-
 func _ready():
-	# Other initialization code
-	connect("body_entered", Callable(self, "_on_body_entered"))
+	# Ensure the object is initially hidden
+	self.visible = false
+	# Connect the input event signal
+	connect("input_event", Callable(self, "_on_input_event"))
 
-func _on_body_entered(body):
-	if body.is_in_group("player"):
-		emit_signal("collected", self)
+func _on_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		# Make the object visible
+		self.visible = true
 		queue_free()
-
-# Function to handle collected objects
-func _on_collectible_collected(collectible):
-	collected_objects.append(collectible)
+		# Optionally, you can emit a signal if needed
+		emit_signal("collected", self)
