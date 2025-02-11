@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4ngqjd27ya2d"
-valid=false
+uid="uid://bdb5uen3idkgb"
+path="res://.godot/imported/crab.png-7289f56e658eb4be72a376db7a0452d1.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://crab.png"
+dest_files=["res://.godot/imported/crab.png-7289f56e658eb4be72a376db7a0452d1.ctex"]
 
 [params]
 
