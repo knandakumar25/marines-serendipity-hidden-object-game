@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cfvdbcpk3xk4p"]
+[gd_scene load_steps=15 format=3 uid="uid://cfvdbcpk3xk4p"]
 
 [ext_resource type="Script" path="res://scenes/beach.gd" id="1_dwcxj"]
 [ext_resource type="Texture2D" uid="uid://bvdvvhlll7fkk" path="res://world_tileset.png" id="1_llkc5"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://cxoime1ueaedn" path="res://scenes/coconut.tscn" id="8_kksvk"]
 [ext_resource type="PackedScene" uid="uid://cygbgajmhnri7" path="res://scenes/sickle.tscn" id="8_n2gn6"]
 [ext_resource type="PackedScene" uid="uid://cn3vqr6v0lbyo" path="res://scenes/fish.tscn" id="9_acoed"]
-[ext_resource type="PackedScene" uid="uid://cksnw82mlbbef" path="res://scenes/player.tscn" id="10_iafgf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rh56d"]
 texture = ExtResource("1_llkc5")
@@ -761,9 +760,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_flf6x")
 stretch_mode = 6
-
-[node name="Player" parent="." instance=ExtResource("10_iafgf")]
-position = Vector2(21, 475)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
