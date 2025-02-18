@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cfvdbcpk3xk4p"]
+[gd_scene load_steps=18 format=3 uid="uid://cfvdbcpk3xk4p"]
 
 [ext_resource type="Script" path="res://scenes/beach.gd" id="1_dwcxj"]
 [ext_resource type="Texture2D" uid="uid://bvdvvhlll7fkk" path="res://world_tileset.png" id="1_llkc5"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://de7u50f1q1lmg" path="res://Terrain (16x16).png" id="3_aky8u"]
 [ext_resource type="Texture2D" uid="uid://d325mpqinlpl0" path="res://east_india_company.png" id="5_wh7x5"]
 [ext_resource type="PackedScene" uid="uid://d10glxpa6uvte" path="res://scenes/axe.tscn" id="6_dc0qc"]
+[ext_resource type="Shader" path="res://scenes/beach.gdshader" id="6_hjrml"]
+[ext_resource type="Script" path="res://scenes/flashlight2.gd" id="6_vpo38"]
 [ext_resource type="PackedScene" uid="uid://cxoime1ueaedn" path="res://scenes/coconut.tscn" id="8_kksvk"]
 [ext_resource type="PackedScene" uid="uid://cygbgajmhnri7" path="res://scenes/sickle.tscn" id="8_n2gn6"]
 [ext_resource type="PackedScene" uid="uid://cn3vqr6v0lbyo" path="res://scenes/fish.tscn" id="9_acoed"]
@@ -731,6 +733,11 @@ sources/0 = SubResource("TileSetAtlasSource_rh56d")
 sources/1 = SubResource("TileSetAtlasSource_7fns5")
 sources/2 = SubResource("TileSetAtlasSource_djvko")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x2n11"]
+shader = ExtResource("6_hjrml")
+shader_parameter/mouse_pos = null
+shader_parameter/radius = 150.0
+
 [node name="Node" type="Node"]
 script = ExtResource("1_dwcxj")
 
@@ -760,6 +767,13 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_flf6x")
 stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_x2n11")
+offset_right = 1156.0
+offset_bottom = 660.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("6_vpo38")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
