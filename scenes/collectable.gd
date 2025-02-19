@@ -20,6 +20,6 @@ func _on_input_event(_viewport, event, _shape_idx):
 		queue_free()  # Remove item from scene
 
 		# Update collected count in beach.gd
-		var beach = get_tree().current_scene
-		if beach and beach.has_method("collect_item"):
-			beach.collect_item(normalized_name)
+		var current = get_tree().current_scene
+		if current and current.has_method("collect_item"):
+			current.collect_item(normalized_name)

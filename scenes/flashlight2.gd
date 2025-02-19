@@ -2,6 +2,9 @@ extends ColorRect
 
 @onready var spotlight_material = material
 
+func _ready() -> void:
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 func _process(delta):
 	if spotlight_material:
 		var viewport_size = get_viewport_rect().size
