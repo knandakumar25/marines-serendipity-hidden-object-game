@@ -62,6 +62,7 @@ func check_completion():
 	for item in collected_items.keys():
 		if collected_items[item] < total_items[item]:
 			return
+	timer.stop()
 	message_label.text = "Success! You have successfully survived. To be continued..."
 	await get_tree().create_timer(10.0).timeout
 	get_tree().quit()
