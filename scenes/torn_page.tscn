@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://vmowjel3prhe"]
+
+[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_xw28d"]
+[ext_resource type="Texture2D" uid="uid://dy6b76r2l26jv" path="res://torn_page.png" id="2_jmsj0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpa5q"]
+radius = 32.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_xw28d")
+item_name = "Torn Page"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jmsj0")
+region_enabled = true
+region_rect = Rect2(50.5, 0, 54.5, 105)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kpa5q")

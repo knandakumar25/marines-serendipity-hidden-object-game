@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://2uj43mednrup"]
+
+[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_bmu5l"]
+[ext_resource type="Texture2D" uid="uid://mnvvmaq3frqe" path="res://canteen.png" id="2_a8nf8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_miywk"]
+radius = 47.5395
+
+[node name="Area2D" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_bmu5l")
+item_name = "Canteen"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_a8nf8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_miywk")

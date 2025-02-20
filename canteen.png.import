@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de7u50f1q1lmg"
-path="res://.godot/imported/Terrain (16x16).png-f072e8a5f99e915c05031c83401c87a9.ctex"
+uid="uid://mnvvmaq3frqe"
+path="res://.godot/imported/canteen.png-42d1ec8dfd5be833ed9443aa9c34ce76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Terrain (16x16).png"
-dest_files=["res://.godot/imported/Terrain (16x16).png-f072e8a5f99e915c05031c83401c87a9.ctex"]
+source_file="res://canteen.png"
+dest_files=["res://.godot/imported/canteen.png-42d1ec8dfd5be833ed9443aa9c34ce76.ctex"]
 
 [params]
 

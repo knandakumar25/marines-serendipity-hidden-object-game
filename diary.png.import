@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhqc76v4v0i5k"
-path="res://.godot/imported/cave.jpg-9c1e2c64801546ddf813ec4ba9947a3b.ctex"
+uid="uid://c866d0y4c285v"
+path="res://.godot/imported/diary.png-ab7029e4f2a6576d68ef6d0ece28e039.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cave.jpg"
-dest_files=["res://.godot/imported/cave.jpg-9c1e2c64801546ddf813ec4ba9947a3b.ctex"]
+source_file="res://diary.png"
+dest_files=["res://.godot/imported/diary.png-ab7029e4f2a6576d68ef6d0ece28e039.ctex"]
 
 [params]
 

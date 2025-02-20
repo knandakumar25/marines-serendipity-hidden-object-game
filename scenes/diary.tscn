@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://crf5kc7s4rfht"]
+
+[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_ftbsl"]
+[ext_resource type="Texture2D" uid="uid://c866d0y4c285v" path="res://diary.png" id="2_mgxeb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mjgpu"]
+radius = 19.2354
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_ftbsl")
+item_name = "Diary"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mgxeb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mjgpu")

@@ -7,16 +7,16 @@
 extends Node
 
 var collected_items = {
+	"berries": 0,
 	"coconut": 0,
-	"fish": 0,
-	"axe": 0,
-	"sickle": 0
+	"wood": 0,
+	"bottle": 0
 }
 var total_items = {
+	"berries": 4,
 	"coconut": 4,
-	"fish": 4,
-	"axe": 1,
-	"sickle": 1
+	"wood": 2,
+	"bottle": 1
 }
 
 @onready var collected_label = get_node("UI/CollectedLabel")
@@ -26,7 +26,7 @@ var total_items = {
 
 func _ready():
 	update_collected_display()
-	timer.wait_time = 20
+	timer.wait_time = 35
 	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
 	
@@ -66,7 +66,7 @@ func check_completion():
 			return
 	message_label.text = "Success! Loading next level..."
 	await get_tree().create_timer(2.0).timeout
-	get_tree().change_scene_to_file("res://scenes/beach.tscn")
+	get_tree().change_scene_to_file("res://scenes/cave.tscn")
 
 func _on_timer_timeout():
 	message_label.text = "Time's up! Restarting..."

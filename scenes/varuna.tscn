@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3tikgvcgmqpq"]
+
+[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_oo81p"]
+[ext_resource type="Texture2D" uid="uid://cpj18d0rtefcd" path="res://varuna.png" id="2_po1lb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ur1bw"]
+radius = 64.0703
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_oo81p")
+item_name = "Varuna Scripture"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_po1lb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ur1bw")

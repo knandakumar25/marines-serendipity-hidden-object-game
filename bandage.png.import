@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdx1qjhg7ke6x"
-path="res://.godot/imported/house.jpg-3cbc685e43c9a826e1b1a66522002b86.ctex"
+uid="uid://b1g3qwwsn8hhm"
+path="res://.godot/imported/bandage.png-8b0a628de823489a3ba781d658a819d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://house.jpg"
-dest_files=["res://.godot/imported/house.jpg-3cbc685e43c9a826e1b1a66522002b86.ctex"]
+source_file="res://bandage.png"
+dest_files=["res://.godot/imported/bandage.png-8b0a628de823489a3ba781d658a819d2.ctex"]
 
 [params]
 

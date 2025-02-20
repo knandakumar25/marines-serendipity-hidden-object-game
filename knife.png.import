@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://krf31raykadr"
-path="res://.godot/imported/Chair.png-5a2bcff050867cf350fc137934b1dff4.ctex"
+uid="uid://cukqa1q3d24hd"
+path="res://.godot/imported/knife.png-3a05c28fdac703eeae0d97922cbb4a37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Chair.png"
-dest_files=["res://.godot/imported/Chair.png-5a2bcff050867cf350fc137934b1dff4.ctex"]
+source_file="res://knife.png"
+dest_files=["res://.godot/imported/knife.png-3a05c28fdac703eeae0d97922cbb4a37.ctex"]
 
 [params]
 

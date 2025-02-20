@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://mtw8er4d7aad"]
+
+[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_0o8cj"]
+[ext_resource type="Texture2D" uid="uid://ujgu8hoy803d" path="res://berries.png" id="2_743k4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7kaeb"]
+radius = 15.1327
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_0o8cj")
+item_name = "Berries"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_743k4")
+region_rect = Rect2(0, 0, 500, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7kaeb")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coax1sl1xo07e"
-path="res://.godot/imported/Tile-Sets (64-64).png-183a330abccb73c1295735f29627b113.ctex"
+uid="uid://cpj18d0rtefcd"
+path="res://.godot/imported/varuna.png-50d07712840d1d9a07f991dad80819ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tile-Sets (64-64).png"
-dest_files=["res://.godot/imported/Tile-Sets (64-64).png-183a330abccb73c1295735f29627b113.ctex"]
+source_file="res://varuna.png"
+dest_files=["res://.godot/imported/varuna.png-50d07712840d1d9a07f991dad80819ed.ctex"]
 
 [params]
 

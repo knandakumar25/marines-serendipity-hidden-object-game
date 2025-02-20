@@ -7,10 +7,16 @@
 extends Node
 
 var collected_items = {
-	"fish": 0,
+	"knife": 0,
+	"bandage": 0,
+	"diary": 0,
+	"canteen": 0
 }
 var total_items = {
-	"fish": 2,
+	"knife": 1,
+	"bandage": 1,
+	"diary": 1,
+	"canteen": 1
 }
 
 @onready var collected_label = get_node("UI/CollectedLabel")
@@ -20,7 +26,7 @@ var total_items = {
 
 func _ready():
 	update_collected_display()
-	timer.wait_time = 20
+	timer.wait_time = 35
 	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
 	
