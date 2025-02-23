@@ -65,9 +65,9 @@ func check_completion():
 		if collected_items[item] < total_items[item]:
 			return
 	timer.stop()
-	message_label.text = "Success! Loading next level..."
+	message_label.text = "Success!"
 	await get_tree().create_timer(2.0).timeout
-	get_tree().change_scene_to_file("res://scenes/beach.tscn")
+	get_tree().change_scene_to_file("res://scenes/black2.tscn")
 
 func _on_timer_timeout():
 	message_label.text = "Time's up! Restarting..."

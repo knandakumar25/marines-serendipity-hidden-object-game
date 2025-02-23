@@ -19,8 +19,6 @@ shader_parameter/radius = 150.0
 [node name="Node" type="Node"]
 script = ExtResource("1_8mb0w")
 
-[node name="SceneObjects" type="Node" parent="."]
-
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
 anchors_preset = 15

@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctsrh6b3bcmrj"]
+
+[ext_resource type="Script" path="res://scenes/the_end.gd" id="1_f5c4s"]
+[ext_resource type="Texture2D" uid="uid://vnm0lklmp3q1" path="res://black.png" id="2_x0gpx"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_f5c4s")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x0gpx")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 84.0
+offset_top = 45.0
+offset_right = 1074.0
+offset_bottom = 603.0
+text = "Text box area"
+
+[node name="EndButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 326.0
+offset_top = -90.0
+offset_right = 496.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "End"
+
+[connection signal="pressed" from="EndButton" to="." method="_on_end_button_pressed"]

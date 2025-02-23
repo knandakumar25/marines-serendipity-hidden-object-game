@@ -10,8 +10,6 @@
 [node name="Node" type="Node"]
 script = ExtResource("1_r5gdc")
 
-[node name="SceneObjects" type="Node" parent="."]
-
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
 anchors_preset = 15
