@@ -20,7 +20,23 @@ offset_left = 84.0
 offset_top = 45.0
 offset_right = 1074.0
 offset_bottom = 603.0
-text = "Text box area"
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+text = "You take the resources back to the ship, and head back to what remains of your cabin. In it, you open the bottle and unroll
+the message inside it. What you see is a map of the island, with an X marked deep into the forest. You recognize where the
+ship ended up, and it doesn't look like a long trip. You think to yourself: \"There must be a reason Varuna sent us here, I need
+to figure out why\". 
+
+You wait for everyone to fall asleep after eating those barely nutricious berries, and head out into the depths of the island.
+You take a lantern with you, along with your knife, gauze and canteen, but you forgot to refill it. 
+
+You follow the path to the X, and end up facing a cave entrance. Hesitant at first, you decide to go in, with your lantern on one
+hand to illuminate the way ahead of you. At the end of the cave, you find yourself at a dead end. You are thursty, so you
+must find a water source to refill your canteen.
+
+There must be something about this place, you think to yourself. The answers will be found in hidden pages and manuscripts
+laying in this cave."
+editable = false
 
 [node name="ContinueButton" type="Button" parent="."]
 anchors_preset = 7

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfvdbcpk3xk4p"]
+[gd_scene load_steps=8 format=3 uid="uid://cfvdbcpk3xk4p"]
 
 [ext_resource type="Script" path="res://scenes/beach.gd" id="1_dwcxj"]
 [ext_resource type="Texture2D" uid="uid://dx2d346f3mgje" path="res://beach.png" id="3_eiwf6"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dtmlfyyrj3ws2" path="res://scenes/wood.tscn" id="4_w1spk"]
 [ext_resource type="PackedScene" uid="uid://bgb63jw5pygyj" path="res://scenes/bottle.tscn" id="5_7t46t"]
 [ext_resource type="PackedScene" uid="uid://cxoime1ueaedn" path="res://scenes/coconut.tscn" id="6_0p415"]
-[ext_resource type="Texture2D" uid="uid://d325mpqinlpl0" path="res://east_india_company.png" id="7_4lh6x"]
 [ext_resource type="PackedScene" uid="uid://caar4hk116w25" path="res://scenes/coconut2.tscn" id="8_xcjqt"]
 
 [node name="Node" type="Node"]
@@ -66,49 +65,42 @@ scale = Vector2(1.5, 1.5)
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Area2D" parent="." instance=ExtResource("3_ledle")]
-position = Vector2(975, 545)
+position = Vector2(1111, 584)
 scale = Vector2(4, 4)
 
 [node name="Area2D2" parent="." instance=ExtResource("3_ledle")]
-position = Vector2(846, 386)
+position = Vector2(842, 340)
 scale = Vector2(0.8, 0.8)
 
 [node name="Area2D3" parent="." instance=ExtResource("3_ledle")]
-position = Vector2(123, 367)
+position = Vector2(77, 364)
 
 [node name="Area2D4" parent="." instance=ExtResource("3_ledle")]
-position = Vector2(288, 496)
+position = Vector2(130, 383)
 
 [node name="Area2D5" parent="." instance=ExtResource("4_w1spk")]
-position = Vector2(545, 319)
+position = Vector2(783, 388)
 scale = Vector2(0.35, 0.35)
 
 [node name="Area2D6" parent="." instance=ExtResource("4_w1spk")]
-position = Vector2(703, 488)
+position = Vector2(699, 492)
 
 [node name="Area2D7" parent="." instance=ExtResource("5_7t46t")]
-position = Vector2(708, 365)
+position = Vector2(705, 375)
 scale = Vector2(0.4, 0.4)
 
 [node name="Area2D8" parent="." instance=ExtResource("6_0p415")]
-position = Vector2(301, 462)
+position = Vector2(673, 66)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D11" parent="." instance=ExtResource("6_0p415")]
-position = Vector2(790, 409)
+position = Vector2(476, 24)
 scale = Vector2(0.5, 0.5)
 
-[node name="EastIndiaCompany" type="Sprite2D" parent="."]
-position = Vector2(366, 320)
-rotation = -0.23911
-scale = Vector2(0.1, 0.1)
-skew = -0.628319
-texture = ExtResource("7_4lh6x")
-
 [node name="Area2D9" parent="." instance=ExtResource("8_xcjqt")]
-position = Vector2(909, 407)
+position = Vector2(765, 57)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D10" parent="." instance=ExtResource("8_xcjqt")]
-position = Vector2(634, 415)
+position = Vector2(462, 24)
 scale = Vector2(0.4, 0.4)

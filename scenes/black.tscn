@@ -1,7 +1,56 @@
-[gd_scene load_steps=3 format=3 uid="uid://bj80smornh3ky"]
+[gd_scene load_steps=5 format=3 uid="uid://bj80smornh3ky"]
 
 [ext_resource type="Script" path="res://scenes/black.gd" id="1_ld8v6"]
 [ext_resource type="Texture2D" uid="uid://vnm0lklmp3q1" path="res://black.png" id="2_tph7j"]
+
+[sub_resource type="FontFile" id="FontFile_0yx3s"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/2/0/ascent = 0.0
+cache/0/2/0/descent = 0.0
+cache/0/2/0/underline_position = 0.0
+cache/0/2/0/underline_thickness = 0.0
+cache/0/2/0/scale = 1.0
+cache/0/3/0/ascent = 0.0
+cache/0/3/0/descent = 0.0
+cache/0/3/0/underline_position = 0.0
+cache/0/3/0/underline_thickness = 0.0
+cache/0/3/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+
+[sub_resource type="FontFile" id="FontFile_j5lv6"]
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
 
 [node name="Node" type="Node"]
 script = ExtResource("1_ld8v6")
@@ -16,11 +65,16 @@ grow_vertical = 2
 texture = ExtResource("2_tph7j")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 84.0
-offset_top = 45.0
-offset_right = 1074.0
-offset_bottom = 603.0
-text = "Text box area"
+offset_left = 440.0
+offset_top = 85.0
+offset_right = 700.0
+offset_bottom = 181.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontFile_0yx3s")
+theme_override_font_sizes/font_size = 50
+text = "Serendipity"
+editable = false
 
 [node name="ContinueButton" type="Button" parent="."]
 anchors_preset = 7
@@ -38,5 +92,29 @@ theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 text = "Continue"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 102.0
+offset_top = 226.0
+offset_right = 1041.0
+offset_bottom = 535.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontFile_j5lv6")
+theme_override_font_sizes/font_size = 20
+text = " After the crew votes to keep going on their journey, the ship dives into the storm ahead which causes 
+the ship to be violently thrown around. 
+The crew huddled below deck and prayed for survival. Hours later, the ship rammed into a rocky coastline 
+and broke apart. The crew felt lucky to be alive and wondered where they had ended up and how to 
+continue their journey. They soon realized that they were on a remote island somewhere in the 
+Indian Ocean, and there were only a few resources for them to survive and rebuild. Before the crash,
+you dreamed with Varuna once again, but you don't remember his command. Filled with guilt as you
+feel the anger of your fellow crewmates, you volunteer to go explore the island in search of resources.
+
+First, you are to recover some valuable objects from the cargo hold below deck. This includes:
+Canteen, Knife, Gauze and Book
+
+Time is of the essence, so you will have only 30 seconds to find these items!"
+editable = false
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

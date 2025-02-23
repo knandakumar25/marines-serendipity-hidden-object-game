@@ -16,11 +16,18 @@ grow_vertical = 2
 texture = ExtResource("2_i2rqh")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 84.0
-offset_top = 45.0
-offset_right = 1074.0
-offset_bottom = 603.0
-text = "Text box area"
+offset_left = 89.0
+offset_top = 211.0
+offset_right = 1064.0
+offset_bottom = 380.0
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+text = "After finding the necessary objects to go out and explore, you head out to the shore. You walk around and look for food.
+According to the book you recovered, blueberries are the only ones you should pick up, as other colors indicate toxic berries.
+Using  the knife now on you, you need to recover this berries, along with coconuts and wood laying around for a fire later
+tonight. After getting some fresh air, you start to remember some flashes of your dream. A picture of a message in a bottle
+resurface, and you are certain it has to be related to your dream. You should be aware and look for it as well."
+editable = false
 
 [node name="ContinueButton" type="Button" parent="."]
 anchors_preset = 7

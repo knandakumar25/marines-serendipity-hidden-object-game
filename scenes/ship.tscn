@@ -68,11 +68,11 @@ position = Vector2(542, 453)
 scale = Vector2(0.75, 0.75)
 
 [node name="Area2D2" parent="." instance=ExtResource("4_lbla7")]
-position = Vector2(616, 501)
-scale = Vector2(0.2, 0.2)
+position = Vector2(607, 520)
+scale = Vector2(0.4, 0.4)
 
 [node name="Area2D3" parent="." instance=ExtResource("5_btbek")]
 position = Vector2(318, 432)
 
 [node name="Area2D4" parent="." instance=ExtResource("6_ls7tr")]
-position = Vector2(647, 303)
+position = Vector2(619, 257)
