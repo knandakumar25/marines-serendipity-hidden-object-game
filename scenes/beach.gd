@@ -23,13 +23,60 @@ var total_items = {
 @onready var timer = $Timer
 @onready var message_label = get_node("UI/MessageLabel")
 @onready var timer_label = get_node("UI/TimerLabel")
+@onready var texture_rect = $UI/TextureRect
+@onready var area2d_list = [$UI/TextureRect/Area2D, $UI/TextureRect/Area2D2, $UI/TextureRect/Area2D3, $UI/TextureRect/Area2D4,
+$UI/TextureRect/Area2D5, $UI/TextureRect/Area2D6, $UI/TextureRect/Area2D7, $UI/TextureRect/Area2D8, $UI/TextureRect/Area2D9,
+$UI/TextureRect/Area2D10, $UI/TextureRect/Area2D11]
+@onready var previous_size := Vector2(1152, 648)
+@onready var previous_scale = Vector2(0,0)
 
 func _ready():
 	update_collected_display()
 	timer.wait_time = 35
 	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
+	for child in get_children():
+		if child is Area2D:
+			area2d_list.append(child)
+	update_area2d_sizes()
+	get_tree().get_root().connect("size_changed", Callable(self, "update_area2d_sizes"))
+
+func update_area2d_sizes():
+	await get_tree().create_timer(0.05).timeout  # Wait for 500 milliseconds (0.5 seconds)
+	var current_size = texture_rect.size
+	print("TextureRect current size:", current_size)  # Debugging output
+	print("TextureRect previous size:", previous_size)  # Debugging output
 	
+	area2d_list = area2d_list.filter(func(area): return is_instance_valid(area)) # removes any objects that were clicked
+	#var new_previous_scales = {}
+	#for area in previous_scales:
+	#	if is_instance_valid(area):
+	#		new_previous_scales[area] = previous_scales[area]
+	#previous_scales = new_previous_scales
+
+	for area in area2d_list:
+		if area:
+			var scale_factor = current_size / previous_size  # scale factor based on previous and current size
+			if(previous_scale == Vector2(0,0)):
+				previous_scale = scale_factor
+			print("Scale factor: ", scale_factor)
+			print("Old Position:", area.position)  # Debug
+			#if scale_factor > Vector2(1,1):
+			#	area.scale *= scale_factor  # Apply scaling
+			#else:
+			#	area.scale = previous_scales[area] # Apply scaling
+			if previous_size != current_size:
+				if scale_factor > Vector2(1,1):
+					area.scale *= 1.6
+					print("New Scale:", area.scale)  # Debug
+				else: if scale_factor < Vector2(1,1):
+					area.scale /= 1.6
+					print("New Scale:", area.scale)  # Debug
+			area.position *= scale_factor
+			print("New Position:", area.position)  # Debug
+	previous_size = current_size
+	print("...")
+
 func _process(delta: float) -> void:
 	update_timer_display()
 

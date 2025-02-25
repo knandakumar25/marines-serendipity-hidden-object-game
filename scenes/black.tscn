@@ -3,6 +3,28 @@
 [ext_resource type="Script" path="res://scenes/black.gd" id="1_ld8v6"]
 [ext_resource type="Texture2D" uid="uid://vnm0lklmp3q1" path="res://black.png" id="2_tph7j"]
 
+[sub_resource type="FontFile" id="FontFile_j5lv6"]
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+
 [sub_resource type="FontFile" id="FontFile_0yx3s"]
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
@@ -30,28 +52,6 @@ cache/0/100/0/underline_position = 0.0
 cache/0/100/0/underline_thickness = 0.0
 cache/0/100/0/scale = 1.0
 
-[sub_resource type="FontFile" id="FontFile_j5lv6"]
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/10/0/ascent = 0.0
-cache/0/10/0/descent = 0.0
-cache/0/10/0/underline_position = 0.0
-cache/0/10/0/underline_thickness = 0.0
-cache/0/10/0/scale = 1.0
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
-
 [node name="Node" type="Node"]
 script = ExtResource("1_ld8v6")
 
@@ -60,44 +60,47 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_tph7j")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 440.0
-offset_top = 85.0
-offset_right = 700.0
-offset_bottom = 181.0
-theme_override_colors/background_color = Color(0, 0, 0, 1)
-theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("FontFile_0yx3s")
-theme_override_font_sizes/font_size = 50
-text = "Serendipity"
-editable = false
-
-[node name="ContinueButton" type="Button" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
+[node name="ContinueButton" type="Button" parent="TextureRect"]
+z_index = 3
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 326.0
-offset_top = -90.0
-offset_right = 496.0
-offset_bottom = -46.0
-grow_horizontal = 2
+offset_left = -287.0
+offset_top = -136.0
+offset_right = -169.0
+offset_bottom = -93.0
+grow_horizontal = 0
 grow_vertical = 0
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 text = "Continue"
 
-[node name="TextEdit2" type="TextEdit" parent="."]
-offset_left = 102.0
-offset_top = 226.0
-offset_right = 1041.0
-offset_bottom = 535.0
+[node name="TextEdit2" type="TextEdit" parent="TextureRect"]
+z_index = 3
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -465.0
+offset_top = -142.0
+offset_right = 486.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_colors/background_color = Color(0, 0, 0, 1)
 theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = SubResource("FontFile_j5lv6")
@@ -117,4 +120,22 @@ Canteen, Knife, Gauze and Book
 Time is of the essence, so you will have only 30 seconds to find these items!"
 editable = false
 
-[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[node name="TextEdit" type="TextEdit" parent="TextureRect"]
+z_index = 3
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.0
+offset_top = 100.0
+offset_right = 151.0
+offset_bottom = 174.0
+grow_horizontal = 2
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("FontFile_0yx3s")
+theme_override_font_sizes/font_size = 50
+text = "Serendipity"
+editable = false
+
+[connection signal="pressed" from="TextureRect/ContinueButton" to="." method="_on_continue_button_pressed"]

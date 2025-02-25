@@ -10,7 +10,9 @@
 [node name="Node" type="Node"]
 script = ExtResource("1_r5gdc")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
 z_index = -1
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,8 +20,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_886ph")
+expand_mode = 3
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="Area2D" parent="UI/TextureRect" instance=ExtResource("6_7daow")]
+position = Vector2(542, 453)
+scale = Vector2(0.75, 0.75)
+
+[node name="Area2D2" parent="UI/TextureRect" instance=ExtResource("4_lbla7")]
+position = Vector2(607, 520)
+scale = Vector2(0.4, 0.4)
+
+[node name="Area2D3" parent="UI/TextureRect" instance=ExtResource("5_btbek")]
+position = Vector2(318, 432)
+
+[node name="Area2D4" parent="UI/TextureRect" instance=ExtResource("6_ls7tr")]
+position = Vector2(619, 257)
 
 [node name="CollectedLabel" type="Label" parent="UI"]
 offset_left = 695.0
@@ -46,13 +61,16 @@ theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 
 [node name="TimerLabel" type="Label" parent="UI"]
-anchors_preset = 5
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
+anchor_bottom = 1.0
 offset_left = -20.0
+offset_top = -23.0
 offset_right = 20.0
-offset_bottom = 23.0
 grow_horizontal = 2
+grow_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -62,17 +80,3 @@ position = Vector2(561, 305)
 scale = Vector2(1.5, 1.5)
 
 [node name="Timer" type="Timer" parent="."]
-
-[node name="Area2D" parent="." instance=ExtResource("6_7daow")]
-position = Vector2(542, 453)
-scale = Vector2(0.75, 0.75)
-
-[node name="Area2D2" parent="." instance=ExtResource("4_lbla7")]
-position = Vector2(607, 520)
-scale = Vector2(0.4, 0.4)
-
-[node name="Area2D3" parent="." instance=ExtResource("5_btbek")]
-position = Vector2(318, 432)
-
-[node name="Area2D4" parent="." instance=ExtResource("6_ls7tr")]
-position = Vector2(619, 257)

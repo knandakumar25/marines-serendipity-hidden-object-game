@@ -16,35 +16,26 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_x0gpx")
 
-[node name="EndButton" type="Button" parent="."]
-anchors_preset = 7
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 326.0
-offset_top = -90.0
-offset_right = 496.0
-offset_bottom = -46.0
+anchor_bottom = 0.5
+offset_left = -211.5
+offset_top = -211.0
+offset_right = 211.5
+offset_bottom = 211.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 25
-text = "End"
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-offset_left = 337.0
-offset_top = 113.0
-offset_right = 760.0
-offset_bottom = 535.0
+grow_vertical = 2
 texture = ExtResource("3_tr571")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 432.0
-offset_top = 222.0
-offset_right = 689.0
-offset_bottom = 366.0
+[node name="TextEdit" type="TextEdit" parent="TextureRect/TextureRect2"]
+offset_left = 95.0
+offset_top = 109.0
+offset_right = 352.0
+offset_bottom = 253.0
 theme_override_colors/background_color = Color(0.913725, 0.878431, 0.768627, 1)
 theme_override_colors/font_readonly_color = Color(0, 0, 0, 1)
 text = "Varuna's judgement is upon us
@@ -54,11 +45,38 @@ liberate your mind
 "
 editable = false
 
-[node name="TextEdit2" type="TextEdit" parent="."]
-offset_left = 118.0
-offset_top = 68.0
-offset_right = 1035.0
-offset_bottom = 187.0
+[node name="EndButton" type="Button" parent="TextureRect"]
+z_index = 3
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -336.0
+offset_top = -130.0
+offset_right = -166.0
+offset_bottom = -86.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+text = "End"
+
+[node name="TextEdit2" type="TextEdit" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -456.0
+offset_top = -235.0
+offset_right = 461.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/background_color = Color(0, 0, 0, 1)
 theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
 text = "After drinking from the canteen, you head back to the ship. You find some pages that describe Varuna encounters
@@ -67,11 +85,19 @@ your dreams, and asks of you to help him prevent regretful fates. But, the torn 
 "
 editable = false
 
-[node name="TextEdit3" type="TextEdit" parent="."]
-offset_left = 130.0
-offset_top = 421.0
-offset_right = 1047.0
-offset_bottom = 564.0
+[node name="TextEdit3" type="TextEdit" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -454.0
+offset_top = 79.0
+offset_right = 463.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/background_color = Color(0, 0, 0, 1)
 theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
 text = "You suddenly realize that Varuna hasn't prevented the sinking of your ship at all. You thought you were an honest,
@@ -81,4 +107,4 @@ Luckily, the torn page might have the answer.
 "
 editable = false
 
-[connection signal="pressed" from="EndButton" to="." method="_on_end_button_pressed"]
+[connection signal="pressed" from="TextureRect/EndButton" to="." method="_on_end_button_pressed"]

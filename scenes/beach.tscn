@@ -11,16 +11,6 @@
 [node name="Node" type="Node"]
 script = ExtResource("1_dwcxj")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = -1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_eiwf6")
-stretch_mode = 6
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="CollectedLabel" type="Label" parent="UI"]
@@ -58,49 +48,59 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 
+[node name="TextureRect" type="TextureRect" parent="UI"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_eiwf6")
+stretch_mode = 6
+
+[node name="Area2D" parent="UI/TextureRect" instance=ExtResource("3_ledle")]
+position = Vector2(1111, 584)
+scale = Vector2(4, 4)
+
+[node name="Area2D2" parent="UI/TextureRect" instance=ExtResource("3_ledle")]
+position = Vector2(842, 340)
+scale = Vector2(0.8, 0.8)
+
+[node name="Area2D3" parent="UI/TextureRect" instance=ExtResource("3_ledle")]
+position = Vector2(77, 364)
+
+[node name="Area2D4" parent="UI/TextureRect" instance=ExtResource("3_ledle")]
+position = Vector2(130, 383)
+
+[node name="Area2D5" parent="UI/TextureRect" instance=ExtResource("4_w1spk")]
+position = Vector2(783, 388)
+scale = Vector2(0.35, 0.35)
+
+[node name="Area2D6" parent="UI/TextureRect" instance=ExtResource("4_w1spk")]
+position = Vector2(699, 492)
+
+[node name="Area2D7" parent="UI/TextureRect" instance=ExtResource("5_7t46t")]
+position = Vector2(705, 375)
+scale = Vector2(0.4, 0.4)
+
+[node name="Area2D8" parent="UI/TextureRect" instance=ExtResource("6_0p415")]
+position = Vector2(673, 66)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D11" parent="UI/TextureRect" instance=ExtResource("6_0p415")]
+position = Vector2(476, 24)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D9" parent="UI/TextureRect" instance=ExtResource("8_xcjqt")]
+position = Vector2(765, 57)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D10" parent="UI/TextureRect" instance=ExtResource("8_xcjqt")]
+position = Vector2(462, 24)
+scale = Vector2(0.4, 0.4)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(561, 305)
 scale = Vector2(1.5, 1.5)
 
 [node name="Timer" type="Timer" parent="."]
-
-[node name="Area2D" parent="." instance=ExtResource("3_ledle")]
-position = Vector2(1111, 584)
-scale = Vector2(4, 4)
-
-[node name="Area2D2" parent="." instance=ExtResource("3_ledle")]
-position = Vector2(842, 340)
-scale = Vector2(0.8, 0.8)
-
-[node name="Area2D3" parent="." instance=ExtResource("3_ledle")]
-position = Vector2(77, 364)
-
-[node name="Area2D4" parent="." instance=ExtResource("3_ledle")]
-position = Vector2(130, 383)
-
-[node name="Area2D5" parent="." instance=ExtResource("4_w1spk")]
-position = Vector2(783, 388)
-scale = Vector2(0.35, 0.35)
-
-[node name="Area2D6" parent="." instance=ExtResource("4_w1spk")]
-position = Vector2(699, 492)
-
-[node name="Area2D7" parent="." instance=ExtResource("5_7t46t")]
-position = Vector2(705, 375)
-scale = Vector2(0.4, 0.4)
-
-[node name="Area2D8" parent="." instance=ExtResource("6_0p415")]
-position = Vector2(673, 66)
-scale = Vector2(0.5, 0.5)
-
-[node name="Area2D11" parent="." instance=ExtResource("6_0p415")]
-position = Vector2(476, 24)
-scale = Vector2(0.5, 0.5)
-
-[node name="Area2D9" parent="." instance=ExtResource("8_xcjqt")]
-position = Vector2(765, 57)
-scale = Vector2(0.5, 0.5)
-
-[node name="Area2D10" parent="." instance=ExtResource("8_xcjqt")]
-position = Vector2(462, 24)
-scale = Vector2(0.4, 0.4)

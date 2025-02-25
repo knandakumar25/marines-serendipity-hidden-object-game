@@ -21,13 +21,90 @@ var total_items = {
 @onready var timer = $Timer
 @onready var message_label = get_node("UI/MessageLabel")
 @onready var timer_label = get_node("UI/TimerLabel")
+@onready var texture_rect = $UI/TextureRect
+@onready var color_rect = $UI/ColorRect
+@onready var area2d_list = [$UI/TextureRect/Area2D, $UI/TextureRect/Area2D2, $UI/TextureRect/Area2D3/CollisionShape2D]
+@onready var previous_size := Vector2(1152, 648)
+@onready var previous_scale = Vector2(0,0)
 
 func _ready():
 	update_collected_display()
 	timer.wait_time = 25
 	timer.start()
 	timer.timeout.connect(_on_timer_timeout)
+	for child in get_children():
+		if child is Area2D:
+			area2d_list.append(child)
+	update_area2d_sizes()
+	get_tree().get_root().connect("size_changed", Callable(self, "update_area2d_sizes"))
+
+func update_area2d_sizes():
+	await get_tree().create_timer(0.1).timeout  # Wait for 500 milliseconds (0.5 seconds)
+	var current_size = texture_rect.size
+	print("TextureRect current size:", current_size)  # Debugging output
+	print("TextureRect previous size:", previous_size)  # Debugging output
 	
+	area2d_list = area2d_list.filter(func(area): return is_instance_valid(area)) # removes any objects that were clicked
+	#var new_previous_scales = {}
+	#for area in previous_scales:
+	#	if is_instance_valid(area):
+	#		new_previous_scales[area] = previous_scales[area]
+	#previous_scales = new_previous_scales
+	print("Z index texture_rect: ", texture_rect.z_index)
+	for area in area2d_list:
+		if area:
+			#area.z_index = 1
+			print("Z index: ", area.z_index)
+			var scale_factor = current_size / previous_size  # scale factor based on previous and current size
+			if(previous_scale == Vector2(0,0)):
+				previous_scale = scale_factor
+			print("Scale factor: ", scale_factor)
+			print("Old Position:", area.position)  # Debug
+			#if scale_factor > Vector2(1,1):
+			#	area.scale *= scale_factor  # Apply scaling
+			#else:
+			#	area.scale = previous_scales[area] # Apply scaling
+			if previous_size != current_size:
+				if scale_factor > Vector2(1,1):
+					area.scale *= 1.6
+					print("New Scale:", area.scale)  # Debug
+				else: if scale_factor < Vector2(1,1):
+					area.scale /= 1.6
+					print("New Scale:", area.scale)  # Debug
+			area.position *= scale_factor
+			print("New Position:", area.position)  # Debug
+	#for CollisionShape2D in area2d_list:
+		#if CollisionShape2D:
+			#var scale_factor = current_size / previous_size  # scale factor based on previous and current size
+			#if(previous_scale == Vector2(0,0)):
+				#previous_scale = scale_factor
+			#print("Scale factor: ", scale_factor)
+			#print("Old Position:", CollisionShape2D.position)  # Debug
+			##if scale_factor > Vector2(1,1):
+			##	area.scale *= scale_factor  # Apply scaling
+			##else:
+			##	area.scale = previous_scales[area] # Apply scaling
+			#if previous_size != current_size:
+				#if scale_factor > Vector2(1,1):
+					#CollisionShape2D.scale *= 1.6
+					#print("New Scale:", CollisionShape2D.scale)  # Debug
+				#else: if scale_factor < Vector2(1,1):
+					#CollisionShape2D.scale /= 1.6
+					#print("New Scale:", CollisionShape2D.scale)  # Debug
+			#CollisionShape2D.position *= scale_factor
+			#print("New Position:", CollisionShape2D.position)  # Debug
+#	var scale_factor = current_size / previous_size  # scale factor based on previous and current size
+#	if previous_size != current_size:
+#		if scale_factor > Vector2(1,1):
+#			color_rect.scale *= 2
+#			print("New Scale:", color_rect.scale)  # Debug
+#		else: if scale_factor < Vector2(1,1):
+#			color_rect.scale /= 2
+#			print("New Scale:", color_rect.scale)  # Debug
+#	color_rect.position *= scale_factor
+	previous_size = current_size
+	print("...")
+
 func _process(delta: float) -> void:
 	update_timer_display()
 
