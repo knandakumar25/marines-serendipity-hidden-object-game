@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [display]
 
+window/size/mode=2
 display_server/size/resizable=true
 
 [input]

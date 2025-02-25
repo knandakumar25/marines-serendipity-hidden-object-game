@@ -23,18 +23,19 @@ texture = ExtResource("2_886ph")
 expand_mode = 3
 
 [node name="Area2D" parent="UI/TextureRect" instance=ExtResource("6_7daow")]
-position = Vector2(542, 453)
-scale = Vector2(0.75, 0.75)
+position = Vector2(534, 447)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" parent="UI/TextureRect" instance=ExtResource("4_lbla7")]
-position = Vector2(607, 520)
-scale = Vector2(0.4, 0.4)
+position = Vector2(980, 207)
+scale = Vector2(0.6, 0.6)
 
 [node name="Area2D3" parent="UI/TextureRect" instance=ExtResource("5_btbek")]
 position = Vector2(318, 432)
 
 [node name="Area2D4" parent="UI/TextureRect" instance=ExtResource("6_ls7tr")]
-position = Vector2(619, 257)
+position = Vector2(773, 256)
+scale = Vector2(0.05, 0.05)
 
 [node name="CollectedLabel" type="Label" parent="UI"]
 offset_left = 695.0

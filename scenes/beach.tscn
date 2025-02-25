@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfvdbcpk3xk4p"]
+[gd_scene load_steps=9 format=3 uid="uid://cfvdbcpk3xk4p"]
 
 [ext_resource type="Script" path="res://scenes/beach.gd" id="1_dwcxj"]
 [ext_resource type="Texture2D" uid="uid://dx2d346f3mgje" path="res://beach.png" id="3_eiwf6"]
-[ext_resource type="PackedScene" uid="uid://mtw8er4d7aad" path="res://scenes/berries.tscn" id="3_ledle"]
+[ext_resource type="PackedScene" path="res://scenes/berries.tscn" id="3_ledle"]
 [ext_resource type="PackedScene" uid="uid://dtmlfyyrj3ws2" path="res://scenes/wood.tscn" id="4_w1spk"]
 [ext_resource type="PackedScene" uid="uid://bgb63jw5pygyj" path="res://scenes/bottle.tscn" id="5_7t46t"]
 [ext_resource type="PackedScene" uid="uid://cxoime1ueaedn" path="res://scenes/coconut.tscn" id="6_0p415"]
+[ext_resource type="Texture2D" uid="uid://b4uwgqff8qwga" path="res://red.png" id="8_a52bl"]
 [ext_resource type="PackedScene" uid="uid://caar4hk116w25" path="res://scenes/coconut2.tscn" id="8_xcjqt"]
 
 [node name="Node" type="Node"]
@@ -59,45 +60,62 @@ texture = ExtResource("3_eiwf6")
 stretch_mode = 6
 
 [node name="Area2D" parent="UI/TextureRect" instance=ExtResource("3_ledle")]
-position = Vector2(1111, 584)
-scale = Vector2(4, 4)
+position = Vector2(1133, 619)
+scale = Vector2(2, 2)
 
 [node name="Area2D2" parent="UI/TextureRect" instance=ExtResource("3_ledle")]
-position = Vector2(842, 340)
-scale = Vector2(0.8, 0.8)
+position = Vector2(1112, 422)
+scale = Vector2(0.4, 0.4)
 
 [node name="Area2D3" parent="UI/TextureRect" instance=ExtResource("3_ledle")]
-position = Vector2(77, 364)
+position = Vector2(54, 373)
+scale = Vector2(0.5, 0.5)
 
 [node name="Area2D4" parent="UI/TextureRect" instance=ExtResource("3_ledle")]
-position = Vector2(130, 383)
+position = Vector2(95, 426)
+scale = Vector2(0.5, 0.5)
 
 [node name="Area2D5" parent="UI/TextureRect" instance=ExtResource("4_w1spk")]
-position = Vector2(783, 388)
+position = Vector2(891, 565)
 scale = Vector2(0.35, 0.35)
 
 [node name="Area2D6" parent="UI/TextureRect" instance=ExtResource("4_w1spk")]
-position = Vector2(699, 492)
+position = Vector2(622, 623)
 
 [node name="Area2D7" parent="UI/TextureRect" instance=ExtResource("5_7t46t")]
 position = Vector2(705, 375)
 scale = Vector2(0.4, 0.4)
 
 [node name="Area2D8" parent="UI/TextureRect" instance=ExtResource("6_0p415")]
-position = Vector2(673, 66)
-scale = Vector2(0.5, 0.5)
+position = Vector2(670, 58)
+scale = Vector2(0.2, 0.2)
 
 [node name="Area2D11" parent="UI/TextureRect" instance=ExtResource("6_0p415")]
-position = Vector2(476, 24)
+position = Vector2(475, 11)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D9" parent="UI/TextureRect" instance=ExtResource("8_xcjqt")]
-position = Vector2(765, 57)
-scale = Vector2(0.5, 0.5)
+position = Vector2(758, 52)
+scale = Vector2(0.3, 0.3)
 
 [node name="Area2D10" parent="UI/TextureRect" instance=ExtResource("8_xcjqt")]
-position = Vector2(462, 24)
+position = Vector2(455, 9)
 scale = Vector2(0.4, 0.4)
+
+[node name="Red" type="Sprite2D" parent="UI/TextureRect"]
+position = Vector2(626, 1056)
+scale = Vector2(0.090625, 0.0859375)
+texture = ExtResource("8_a52bl")
+
+[node name="Red2" type="Sprite2D" parent="UI/TextureRect"]
+position = Vector2(366.5, 996)
+scale = Vector2(-0.0573233, -0.05729)
+texture = ExtResource("8_a52bl")
+
+[node name="Red3" type="Sprite2D" parent="UI/TextureRect"]
+position = Vector2(2089, 1050)
+scale = Vector2(0.0656249, 0.0542971)
+texture = ExtResource("8_a52bl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(561, 305)
