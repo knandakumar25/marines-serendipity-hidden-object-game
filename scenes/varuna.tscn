@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://d3tikgvcgmqpq"]
 
-[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_oo81p"]
+[ext_resource type="Script" uid="uid://ce7cxyngu7a8b" path="res://scenes/collectable.gd" id="1_oo81p"]
 [ext_resource type="Texture2D" uid="uid://cpj18d0rtefcd" path="res://varuna.png" id="2_po1lb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ur1bw"]

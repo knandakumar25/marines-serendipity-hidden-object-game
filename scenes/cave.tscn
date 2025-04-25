@@ -1,16 +1,16 @@
 [gd_scene load_steps=10 format=3 uid="uid://crysfo3blo536"]
 
-[ext_resource type="Script" path="res://scenes/cave.gd" id="1_8mb0w"]
+[ext_resource type="Script" uid="uid://b8vxpf2h8t76v" path="res://scenes/cave.gd" id="1_8mb0w"]
 [ext_resource type="Texture2D" uid="uid://cjwh2ntxjk1xd" path="res://cave.png" id="1_aoljh"]
 [ext_resource type="PackedScene" uid="uid://vmowjel3prhe" path="res://scenes/torn_page.tscn" id="3_5hs3n"]
 [ext_resource type="PackedScene" uid="uid://d3tikgvcgmqpq" path="res://scenes/varuna.tscn" id="4_1kl3w"]
-[ext_resource type="Script" path="res://scenes/collectable.gd" id="5_8ynen"]
-[ext_resource type="Shader" path="res://scenes/beach.gdshader" id="6_k2eaa"]
-[ext_resource type="Script" path="res://scenes/flashlight2.gd" id="7_qhx1d"]
+[ext_resource type="Script" uid="uid://ce7cxyngu7a8b" path="res://scenes/collectable.gd" id="5_8ynen"]
+[ext_resource type="Shader" uid="uid://dgc3uqg02jnmj" path="res://scenes/beach.gdshader" id="6_k2eaa"]
+[ext_resource type="Script" uid="uid://biic3ietnm6vi" path="res://scenes/flashlight2.gd" id="7_qhx1d"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_isjm1"]
 shader = ExtResource("6_k2eaa")
-shader_parameter/mouse_pos = null
+shader_parameter/mouse_pos = Vector2(0, 0)
 shader_parameter/radius = 150.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nllfd"]

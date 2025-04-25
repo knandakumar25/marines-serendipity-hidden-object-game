@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://caar4hk116w25"]
 
-[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_unam2"]
+[ext_resource type="Script" uid="uid://ce7cxyngu7a8b" path="res://scenes/collectable.gd" id="1_unam2"]
 [ext_resource type="Texture2D" uid="uid://bc0ohb0mxfnrb" path="res://coconut.png" id="2_18xfn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnx0n"]

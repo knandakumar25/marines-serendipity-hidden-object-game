@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bgb63jw5pygyj"]
 
-[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_6dao8"]
+[ext_resource type="Script" uid="uid://ce7cxyngu7a8b" path="res://scenes/collectable.gd" id="1_6dao8"]
 [ext_resource type="Texture2D" uid="uid://cb1i13d2unemg" path="res://bottle.png" id="2_edxgt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ik8h"]

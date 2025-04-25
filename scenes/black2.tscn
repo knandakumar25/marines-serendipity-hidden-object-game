@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxjm7jx3aa40g"]
 
-[ext_resource type="Script" path="res://scenes/black_2.gd" id="1_3r3k8"]
+[ext_resource type="Script" uid="uid://ungnk3owbtl4" path="res://scenes/black_2.gd" id="1_3r3k8"]
 [ext_resource type="Texture2D" uid="uid://vnm0lklmp3q1" path="res://black.png" id="2_i2rqh"]
 
 [sub_resource type="FontFile" id="FontFile_msrxk"]
@@ -100,8 +100,8 @@ offset_right = -219.0
 offset_bottom = -116.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 25
 text = "Continue"
 

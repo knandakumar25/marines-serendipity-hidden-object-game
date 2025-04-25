@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cfvdbcpk3xk4p"]
 
-[ext_resource type="Script" path="res://scenes/beach.gd" id="1_dwcxj"]
+[ext_resource type="Script" uid="uid://bwcblnc0hbt5g" path="res://scenes/beach.gd" id="1_dwcxj"]
 [ext_resource type="Texture2D" uid="uid://dx2d346f3mgje" path="res://beach.png" id="3_eiwf6"]
-[ext_resource type="PackedScene" path="res://scenes/berries.tscn" id="3_ledle"]
+[ext_resource type="PackedScene" uid="uid://mtw8er4d7aad" path="res://scenes/berries.tscn" id="3_ledle"]
 [ext_resource type="PackedScene" uid="uid://dtmlfyyrj3ws2" path="res://scenes/wood.tscn" id="4_w1spk"]
 [ext_resource type="PackedScene" uid="uid://bgb63jw5pygyj" path="res://scenes/bottle.tscn" id="5_7t46t"]
 [ext_resource type="PackedScene" uid="uid://cxoime1ueaedn" path="res://scenes/coconut.tscn" id="6_0p415"]

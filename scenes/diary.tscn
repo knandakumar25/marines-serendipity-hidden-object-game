@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://crf5kc7s4rfht"]
 
-[ext_resource type="Script" path="res://scenes/collectable.gd" id="1_ftbsl"]
+[ext_resource type="Script" uid="uid://ce7cxyngu7a8b" path="res://scenes/collectable.gd" id="1_ftbsl"]
 [ext_resource type="Texture2D" uid="uid://c866d0y4c285v" path="res://diary.png" id="2_mgxeb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mjgpu"]
